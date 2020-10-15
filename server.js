@@ -14,6 +14,11 @@ console.log('hello');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get("/", function(req, res) {
+    res.send("hello");
+})
+
+
 app.listen(PORT, () => {
     console.log('app running on port: ' + PORT);
 });
